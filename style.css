@@ -407,6 +407,7 @@ body.dark-mode textarea {
     z-index: 1002;
     padding-top: 0;
     align-items: flex-start;
+    pointer-events: none; /* Prevent sidebar from blocking clicks except nav-links and hamburger */
   }
   .sidebar .logo {
     display: none;
@@ -423,6 +424,7 @@ body.dark-mode textarea {
     color: #fff;
     font-size: 2.2rem;
     box-shadow: none;
+    pointer-events: auto; /* Allow hamburger to be clickable */
   }
   .nav-links {
     display: none;
@@ -438,9 +440,27 @@ body.dark-mode textarea {
     z-index: 1003;
     box-shadow: 2px 0 16px rgba(0,0,0,0.08);
     transition: left 0.3s;
+    pointer-events: auto; /* Make nav-links clickable */
   }
   .nav-links.open {
     display: flex;
+  }
+  .nav-links a {
+    font-size: 1.2rem;
+    padding: 18px 36px;
+    border-radius: 8px 0 0 8px;
+    letter-spacing: 1.2px;
+    transition: background 0.25s, color 0.25s, padding 0.2s;
+    font-weight: 500;
+    display: block;
+  }
+  .nav-links a:hover,
+  .nav-links a.active {
+    background: #fff;
+    color: #ff5c8d;
+    padding-left: 48px;
+    font-weight: 700;
+    box-shadow: 2px 2px 12px #ff5c8d22;
   }
   body {
     margin-left: 0;
