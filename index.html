@@ -9,114 +9,142 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
 </head>
 <body>
-
-  <!-- Navbar -->
-  <nav id="navbar">
+  <!-- 📌 Sidebar Navigation -->
+  <nav id="navbar" class="sidebar" role="navigation" aria-label="Main navigation">
     <div class="logo">Teesha</div>
-    <ul class="nav-links">
+    <button class="hamburger" id="hamburger" aria-label="Toggle Menu">&#9776;</button>
+    <ul class="nav-links" id="navLinks">
       <li><a href="#home" class="nav-link">Home</a></li>
       <li><a href="#about" class="nav-link">About</a></li>
-      <li class="dropdown">
-        <a href="#skills" class="nav-link">Skills ▾</a>
-        <ul class="dropdown-menu">
-          <li><a href="#">HTML</a></li>
-          <li><a href="#">CSS</a></li>
-        </ul>
-      </li>
+      <li><a href="#skills" class="nav-link">Skills</a></li>
       <li><a href="#education" class="nav-link">Education</a></li>
       <li><a href="#hobbies" class="nav-link">Hobbies</a></li>
       <li><a href="#contact" class="nav-link">Contact</a></li>
     </ul>
   </nav>
 
-  <!-- Hero Section -->
-  <header id="home">
-  <div class="hero-content">
-    <h1>Hello, I’m <span>Teesha</span></h1>
-    <p>Welcome to my Portfolio Website</p>
-    <a href="#contact" class="btn">Let’s Connect</a>
-  </div>
-</header>
+  <!-- 🌟 Hero Section -->
+  <header id="home" role="banner">
+    <div class="hero-content">
+      <h1>Hello, I’m <span>Teesha</span></h1>
+      <p>Welcome to my Portfolio</p><br>
+      <a href="#contact" class="btn">Let’s Connect</a>
+    </div>
+  </header>
 
-
-  <!-- About Section -->
-  <section id="about">
-    <h2><i class="fas fa-user"></i> About Me</h2>
-    <p>I'm Teesha Pinge, a Computer Engineering student at Goa University. I’m passionate about building web experiences and exploring new technologies. I value adaptability, learning, and creativity.</p>
+  <!-- 👩‍💻 About Section -->
+  <section id="about" aria-labelledby="about-heading">
+    <h2 id="about-heading"><i class="fas fa-user"></i> About Me</h2>
+    <p>I’m a Computer Engineering student at Goa University, passionate about web technologies and creativity.</p>
   </section>
 
-  <!-- Skills Section -->
-  <section id="skills">
-    <h2><i class="fas fa-code"></i> My Skills</h2>
+  <!-- 💼 Skills Section -->
+  <section id="skills" aria-labelledby="skills-heading">
+    <h2 id="skills-heading"><i class="fas fa-laptop-code"></i> My Skills</h2>
     <div class="skills-grid">
-      <div class="skill-box"><i class="fab fa-html5"></i> HTML5</div>
-      <div class="skill-box"><i class="fab fa-css3-alt"></i> CSS3</div>
-      <div class="skill-box"><i class="fas fa-lightbulb"></i> Problem Solving</div>
-      <div class="skill-box"><i class="fas fa-brain"></i> Adaptability</div>
+      <div class="skill-box">
+        <i class="fab fa-html5"></i>
+        <h3><a href="https://www.w3schools.com/html/" target="_blank">HTML5</a></h3>
+        <p>Structure semantic markup</p>
+      </div>
+      <div class="skill-box">
+        <i class="fab fa-css3-alt"></i>
+        <h3><a href="https://www.w3schools.com/css/" target="_blank">CSS3</a></h3>
+        <p>Responsive design, transitions</p>
+      </div>
+      <div class="skill-box">
+        <i class="fab fa-js-square"></i>
+        <h3><a href="https://www.javascript.com/" target="_blank">JavaScript</a></h3>
+        <p>Interactive behavior</p>
+      </div>
+      <div class="skill-box">
+        <i class="fas fa-brain"></i>
+        <h3>Problem Solving</h3>
+        <p>Logical thinking & debugging</p>
+      </div>
     </div>
   </section>
 
-  <!-- Education Section -->
-  <section id="education">
-    <h2><i class="fas fa-graduation-cap"></i> Education</h2>
+  <!-- 🎓 Education Section -->
+  <section id="education" aria-labelledby="edu-heading">
+    <h2 id="edu-heading"><i class="fas fa-graduation-cap"></i> Education</h2>
     <ul>
-      <li>B.E. in Computer Engineering – Goa University (2022–2026)</li>
+      <li>B.E. in Computer Engineering – Goa University (2023–2027)</li>
     </ul>
   </section>
 
-  <!-- Hobbies Section -->
-  <section id="hobbies">
-    <h2><i class="fas fa-heart"></i> My Hobbies</h2>
-    <div class="hobbies-gallery">
-      <div class="hobby-card">
-        <img src="Images/reading.jpg" alt="Reading books">
-        <p>Reading</p>
+  <!-- 🎨 Hobbies Section -->
+  <section id="hobbies" aria-labelledby="hobbies-heading">
+    <h2 id="hobbies-heading"><i class="fas fa-heart"></i> Hobbies</h2>
+    
+    <div class="hobby-gallery">
+      <!-- 📚 Reading Card -->
+      <div class="hobby-card" tabindex="0">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="Images/reading.jpg" alt="Reading">
+            <h3>Reading</h3>
+          </div>
+          <div class="card-back">
+            <h3>Reading</h3>
+            <p>I love exploring fiction, non-fiction, and self-help books. Reading broadens my perspective and inspires creativity.</p>
+          </div>
+        </div>
       </div>
-      <div class="hobby-card">
-        <img src="Images/editing.jpg" alt="Video Editing">
-        <p>Editing</p>
+
+      <!-- ✂️ Editing Card -->
+      <div class="hobby-card" tabindex="0">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="Images/editing.jpg" alt="Editing">
+            <h3>Editing</h3>
+          </div>
+          <div class="card-back">
+            <h3>Editing</h3>
+            <p>Video and photo editing lets me express creativity. I enjoy learning new tools and crafting visual stories.</p>
+          </div>
+        </div>
       </div>
-      <div class="hobby-card">
-        <img src="Images/photography.jpg" alt="Photography hobby">
-        <p>Photography</p>
+
+      <!-- 📷 Photography Card -->
+      <div class="hobby-card" tabindex="0">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="Images/photography.jpg" alt="Photography">
+            <h3>Photography</h3>
+          </div>
+          <div class="card-back">
+            <h3>Photography</h3>
+            <p>Capturing moments through my lens is my passion. I love experimenting with light and composition.</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Contact Section -->
-  <section id="contact">
-    <h2><i class="fas fa-envelope"></i> Contact Me</h2>
-    <p>You can reach out via social media or by filling out the form below.</p>
-
-    <!-- Social Links -->
+  <!-- ✉️ Contact Section -->
+  <section id="contact" aria-labelledby="contact-heading">
+    <h2 id="contact-heading"><i class="fas fa-envelope"></i> Contact Me</h2>
     <div class="social-links">
-      <a href="https://github.com/Teesha-hub" target="_blank"><i class="fab fa-github"></i></a>
-      <a href="https://www.linkedin.com/in/teesha-pinge-834b8628a/" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/Teesha-hub" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/teesha-pinge-834b8628a/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
     </div>
-
-    <!-- Contact Form -->
-    <form class="contact-form">
+    <form class="contact-form" action="mailto:youremail@example.com" method="POST" enctype="text/plain">
       <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="email" placeholder="Your Email" required />
+      <input type="email" id="email" name="email" placeholder="Your Email" required />
+      <span id="emailError" class="error-msg" aria-live="polite"></span>
       <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
       <button type="submit" class="btn">Send Message</button>
     </form>
   </section>
 
-  <!-- Footer -->
-  <footer>
+  <!-- 🔚 Footer & Scroll Button -->
+  <footer role="contentinfo">
     <p>&copy; 2025 Teesha Pinge. All rights reserved.</p>
   </footer>
+  <button id="scrollToTop" title="Go to top" aria-label="Scroll to top">↑</button>
 
-  <!-- Scroll to Top -->
-  <button id="scrollToTop" title="Go to top">↑</button>
-  <script>
-    const scrollBtn = document.getElementById("scrollToTop");
-    window.onscroll = function () {
-      scrollBtn.style.display = (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) ? "block" : "none";
-    };
-    scrollBtn.onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
-  </script>
-
+  <!-- 🔗 JavaScript File -->
+  <script src="script.js"></script>
 </body>
 </html>
