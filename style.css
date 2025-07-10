@@ -394,22 +394,35 @@ body.dark-mode textarea {
     margin-left: 60px;
   }
 }
+/* Responsive Sidebar Navbar for Mobile */
 @media (max-width: 900px) {
   .sidebar {
-    width: 60px;
-    align-items: center;
-    padding-top: 20px;
+    width: 100%;
+    height: auto;
+    background: none;
+    box-shadow: none;
+    position: fixed;
+    left: 0;
+    top: 0;
     z-index: 1002;
+    padding-top: 0;
+    align-items: flex-start;
   }
   .sidebar .logo {
-    display: none; /* Hide logo on mobile to prevent cut-off */
+    display: none;
   }
   .hamburger {
     display: block;
-    margin-left: 0;
-    margin-bottom: 0;
-    position: relative;
+    margin: 18px 0 0 18px;
+    position: fixed;
+    left: 0;
+    top: 0;
     z-index: 1004;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 2.2rem;
+    box-shadow: none;
   }
   .nav-links {
     display: none;
